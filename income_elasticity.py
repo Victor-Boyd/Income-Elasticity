@@ -1,0 +1,38 @@
+import math
+
+# Input values
+quantity1 = 0
+quantity2 = 0.03
+income1 = 0
+income2 = 0.16
+
+
+# Calculating the midpoint of income and quantity
+midpoint_quantity = (quantity1 + quantity2) / 2
+midpoint_income = (income1 + income2) / 2
+
+# Calculating percentage change in quantity demanded
+quantity_percentage_change = ((quantity2 - quantity1) / midpoint_quantity) * 100
+
+print("Percent change in quantity =", quantity_percentage_change, "%")
+
+# Calculating percentage change in income
+income_percentage_change = ((income2 - income1) / midpoint_income) * 100
+
+print("Percent change in income =", income_percentage_change, "%")
+
+# Calculating income elasticity
+income_elasticity = quantity_percentage_change / income_percentage_change
+
+# Print income elasticity
+print("Income elasticity =", income_elasticity)
+
+# Interpretation
+if income_elasticity > 1:
+    print("Income is elastic (normal good)")
+elif income_elasticity < 0:
+    print("Income is inelastic (inferior good)")
+elif income_elasticity == 1:
+    print("Income is unit elastic")
+else:
+    print("Income elasticity has another interpretation")
