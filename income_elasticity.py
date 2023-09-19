@@ -1,10 +1,10 @@
 import math
 
 # Input values
-quantity1 = 0
-quantity2 = 0.03
-income1 = 0
-income2 = 0.16
+quantity1 = 400
+quantity2 = 450
+income1 = 50000
+income2 = 60000
 
 
 # Calculating the midpoint of income and quantity
@@ -29,10 +29,12 @@ print("Income elasticity =", income_elasticity)
 
 # Interpretation
 if income_elasticity > 1:
+    print("Income is highly elastic (normal good)")
+elif income_elasticity > 0 and income_elasticity <= 1:
     print("Income is elastic (normal good)")
 elif income_elasticity < 0:
     print("Income is inelastic (inferior good)")
-elif income_elasticity == 1:
-    print("Income is unit elastic")
+elif income_elasticity == 0:
+    print("Income has no effect on quantity demanded (perfectly inelastic)")
 else:
     print("Income elasticity has another interpretation")
